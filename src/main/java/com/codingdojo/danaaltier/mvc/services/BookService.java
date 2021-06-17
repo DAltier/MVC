@@ -46,6 +46,10 @@ public class BookService {
 	}
 	
 	
+	public Book updateBook(Book b) {
+		return updateBook(b.getId(), b.getTitle(), b.getDescription(), b.getLanguage(), b.getNumberOfPages());
+	}
+	
 	// updates a book
 	public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
     	Optional <Book> temp = bookRepository.findById(id);
